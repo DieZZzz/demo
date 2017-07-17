@@ -23,6 +23,28 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.epam</groupId>
+            <artifactId>app-kafka-producer</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.epam</groupId>
+                    <artifactId>app-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.epam</groupId>
+            <artifactId>app-kafka-consumer</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.epam</groupId>
+                    <artifactId>app-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${swagger.version}</version>

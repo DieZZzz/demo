@@ -16,7 +16,7 @@ import java.util.Collection;
 
 @RestController
 @RequestMapping(value = "/api/v1/commits")
-@Api(value = "Commits REST Api",description = "Operations with commits")
+@Api(value = "Commits REST Api", description = "Operations with commits")
 public class CommitController {
 
     private final CommitService commitService;

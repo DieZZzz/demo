@@ -1,0 +1,7 @@
+elasticsearch:
+  host: localhost
+  port: 9300
+kafka:
+  host: localhost
+  port: 9092
+  topic: commits

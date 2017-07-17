@@ -9,7 +9,9 @@
 	<modules>
         <module>app-core</module>
 		<module>app-starter</module>
-	</modules>
+		<module>app-kafka-producer</module>
+        <module>app-kafka-consumer</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>demo</name>
