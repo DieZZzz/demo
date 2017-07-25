@@ -47,10 +47,7 @@ public class CommitServiceTest {
         Commit testCommit = commitService.save(commit);
 
         Assert.assertNotNull(testCommit);
-        Assert.assertNotNull(testCommit.getId());
-        Assert.assertEquals(commit.getId(), testCommit.getId());
-        Assert.assertNotNull(testCommit.getMessage());
-        Assert.assertEquals(commit.getMessage(), testCommit.getMessage());
+        Assert.assertEquals(commit, testCommit);
     }
 
     @Test
@@ -61,10 +58,7 @@ public class CommitServiceTest {
         Commit testCommit = commitService.findOne(commit.getId());
 
         Assert.assertNotNull(testCommit);
-        Assert.assertNotNull(testCommit.getId());
-        Assert.assertEquals(commit.getId(), testCommit.getId());
-        Assert.assertNotNull(testCommit.getMessage());
-        Assert.assertEquals(commit.getMessage(), testCommit.getMessage());
+        Assert.assertEquals(commit, testCommit);
     }
 
     @Test
