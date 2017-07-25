@@ -35,6 +35,8 @@ public class CommitServiceTest {
         Commit commit = new Commit();
         commit.setId("test");
         commit.setMessage("test message");
+        commit.setStatus("success");
+        commit.setAuthorName("siarhei");
         return commit;
     }
 
@@ -82,6 +84,28 @@ public class CommitServiceTest {
 
         int expectedAmount = 1;
         Collection<Commit> commits = commitService.findAll();
+
+        Assert.assertEquals(expectedAmount, commits.size());
+    }
+
+    @Test
+    public void testFindByStatus() {
+        Commit commit = getTestCommit();
+        commitService.save(commit);
+
+        int expectedAmount = 1;
+        Collection<Commit> commits = commitService.findByStatus("success");
+
+        Assert.assertEquals(expectedAmount, commits.size());
+    }
+
+    @Test
+    public void testFindByAuthorName() {
+        Commit commit = getTestCommit();
+        commitService.save(commit);
+
+        int expectedAmount = 1;
+        Collection<Commit> commits = commitService.findByAuthorName("siarhei");
 
         Assert.assertEquals(expectedAmount, commits.size());
     }

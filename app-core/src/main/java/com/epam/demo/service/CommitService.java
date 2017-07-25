@@ -13,4 +13,8 @@ public interface CommitService {
     Commit findOne(String id);
 
     Collection<Commit> findAll();
+
+    Collection<Commit> findByStatus(String status);
+
+    Collection<Commit> findByAuthorName(String authorName);
 }

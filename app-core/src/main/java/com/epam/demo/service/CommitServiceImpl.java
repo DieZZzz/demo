@@ -40,4 +40,14 @@ public class CommitServiceImpl implements CommitService {
         AggregatedPageImpl<Commit> commits = (AggregatedPageImpl<Commit>) commitRepository.findAll();
         return commits.getContent() == null ? Collections.emptyList() : commits.getContent();
     }
+
+    @Override
+    public Collection<Commit> findByStatus(String status) {
+        return commitRepository.findByStatus(status);
+    }
+
+    @Override
+    public Collection<Commit> findByAuthorName(String authorName) {
+        return commitRepository.findByAuthorName(authorName);
+    }
 }
