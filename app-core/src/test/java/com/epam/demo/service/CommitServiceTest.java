@@ -88,7 +88,7 @@ public class CommitServiceTest {
         commitService.save(commit);
 
         int expectedAmount = 1;
-        Collection<Commit> commits = commitService.findByStatus("success");
+        Collection<Commit> commits = commitService.findByStatus(commit.getStatus());
 
         Assert.assertEquals(expectedAmount, commits.size());
     }
@@ -99,7 +99,7 @@ public class CommitServiceTest {
         commitService.save(commit);
 
         int expectedAmount = 1;
-        Collection<Commit> commits = commitService.findByAuthorName("siarhei");
+        Collection<Commit> commits = commitService.findByAuthorName(commit.getAuthorName());
 
         Assert.assertEquals(expectedAmount, commits.size());
     }
